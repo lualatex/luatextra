@@ -166,16 +166,14 @@ See source file '\inFileName' for details.
 \fi
 %    \end{macrocode}
 %
-%    Load packages; \pf{luatexbase} and \pf{lualibs} are loaded (indirectly)
+%    Load packages;  \pf{lualibs} is loaded (indirectly)
 %    by fontspec, but just to be sure (in case it changes in the future).
 %
 %    \begin{macrocode}
-\RequirePackage{luatexbase}
-\RequireLuaModule{lualibs}
+\directlua{require("lualibs")}
 \RequirePackage{fontspec}
 \RequirePackage{metalogo}
 \RequirePackage{luacode}
-\RequirePackage{fixltx2e}
 %    \end{macrocode}
 %
 %    \begin{macrocode}
